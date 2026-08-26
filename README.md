@@ -4,7 +4,7 @@ Portfolio pessoal desenvolvido com HTML5, CSS3 e JavaScript vanilla, apresentand
 
 ## 🌐 Deploy
 
-[www.guilhermecmais.com]([https://www.guilhermecmais.com](https://guilhermecmais-delta.vercel.app/))
+[[www.guilhermecmais.com](https://guilhermecmais-delta.vercel.app/)]
 
 ## 🛠️ Tecnologias
 
