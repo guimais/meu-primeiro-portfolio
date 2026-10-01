@@ -1,613 +1,347 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guilherme C. Mais — Dev Front-end</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
-  <meta name="description" content="Desenvolvedor front-end focado em interfaces limpas, acessíveis e de alto desempenho. React, HTML, CSS, JavaScript." />
-  <meta name="author" content="Guilherme Carvalho Mais" />
-  <meta property="og:title" content="Guilherme C. Mais — Dev Front-end" />
-  <meta property="og:description" content="Portfólio de desenvolvimento front-end com projetos reais." />
-  <meta property="og:type" content="website" />
+	<title>Guilherme Mais | Programador e Estudante de Engenharia da Computação</title>
+	<meta name="description" content="Portfólio de Guilherme Carvalho Mais, programador e estudante de Engenharia da Computação na PUC-Campinas. Projetos em C, Java, Python, JavaScript, HTML5 e CSS, com foco em Cibersegurança.">
+	<meta name="keywords" content="programador, engenharia da computação, PUC-Campinas, cibersegurança, C, Java, Python, JavaScript, HTML5, CSS3, portfólio, Guilherme Mais">
+	<meta name="author" content="Guilherme Carvalho Mais">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<meta name="theme-color" content="#000000">
+	<link rel="canonical" href="https://www.guilhermecmais.com/">
 
-  
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Guilherme Carvalho Mais","jobTitle":"Front-end Developer","url":"https://www.guilhermecmais.com"}
-  </script>
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:site_name" content="Guilherme Mais">
+	<meta property="og:url" content="https://www.guilhermecmais.com/">
+	<meta property="og:title" content="Guilherme Mais | Programador e Estudante de Engenharia da Computação">
+	<meta property="og:description" content="Programador e estudante de Engenharia da Computação na PUC-Campinas, com foco em Cibersegurança.">
+	<meta property="og:image" content="https://www.guilhermecmais.com/imagens/IMG_1118.PNG">
+	<meta property="og:image:alt" content="Foto de perfil de Guilherme Carvalho Mais">
 
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Guilherme Mais | Programador e Estudante de Engenharia da Computação">
+	<meta name="twitter:description" content="Programador e estudante de Engenharia da Computação na PUC-Campinas, com foco em Cibersegurança.">
+	<meta name="twitter:image" content="https://www.guilhermecmais.com/imagens/IMG_1118.PNG">
+
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/main.js" defer></script>
 </head>
 <body>
+	<a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-  
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
+	<svg class="svg-definitions" width="0" height="0" aria-hidden="true" focusable="false">
+		<symbol id="icon-github" viewBox="0 0 24 24">
+			<path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+		</symbol>
+		<symbol id="icon-arrow-right" viewBox="0 0 16 16">
+			<path d="M3 8h10M9 4l4 4-4 4"/>
+		</symbol>
+	</svg>
 
-  
-  <svg class="glass-filter-svg" aria-hidden="true">
-    <defs>
-      <filter id="container-glass" x="0%" y="0%" width="100%" height="100%" colorInterpolationFilters="sRGB">
-        <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="1" seed="1" result="turbulence"/>
-        <feGaussianBlur in="turbulence" stdDeviation="2" result="blurredNoise"/>
-        <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="70" xChannelSelector="R" yChannelSelector="B" result="displaced"/>
-        <feGaussianBlur in="displaced" stdDeviation="4" result="finalBlur"/>
-        <feComposite in="finalBlur" in2="finalBlur" operator="over"/>
-      </filter>
-    </defs>
-  </svg>
+	<header class="site-header">
+		<nav class="nav" id="siteNavigation" aria-label="Navegação principal">
+			<a href="#inicio" class="nav__logo" aria-label="Guilherme Mais, voltar ao início">Guilherme</a>
 
+			<ul class="nav__links">
+				<li><a href="#sobre" class="nav__link">Sobre</a></li>
+				<li><a href="#experiencia" class="nav__link">Experiência</a></li>
+				<li><a href="#habilidades" class="nav__link">Skills</a></li>
+				<li><a href="#projetos" class="nav__link">Projetos</a></li>
+				<li><a href="#contato" class="nav__link">Contato</a></li>
+			</ul>
 
+			<a href="#contato" class="nav__cta">Trabalhe comigo</a>
 
-  
-  <nav class="nav" id="nav" aria-label="Navegação principal">
-    <a href="#hero" class="nav__logo" aria-label="Início">
-      
-      <span>Guilherme</span>
-    </a>
+			<button type="button" class="nav__toggle" id="mobileMenuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</button>
+		</nav>
 
-    <ul class="nav__links" role="list">
-      <li><a href="#about"    class="nav__link">Sobre</a></li>
-      <li><a href="#skills"   class="nav__link">Skills</a></li>
-      <li><a href="#projects" class="nav__link">Projetos</a></li>
-      <li><a href="#contact"  class="nav__link">Contato</a></li>
-    </ul>
+		<nav class="mobile-menu" id="mobileMenu" aria-label="Navegação mobile" aria-hidden="true">
+			<ul>
+				<li><a href="#sobre" class="mobile-menu__link">Sobre</a></li>
+				<li><a href="#experiencia" class="mobile-menu__link">Experiência</a></li>
+				<li><a href="#habilidades" class="mobile-menu__link">Skills</a></li>
+				<li><a href="#projetos" class="mobile-menu__link">Projetos</a></li>
+				<li><a href="#contato" class="mobile-menu__link">Contato</a></li>
+			</ul>
+		</nav>
+	</header>
 
-    <a href="#contact" class="nav__cta">Trabalhe comigo →</a>
+	<main id="conteudo-principal">
+		<section class="hero" id="inicio" aria-labelledby="heroTitle">
+			<div class="hero__content">
+				<p class="hero__badge">
+					<span class="hero__badge-dot" aria-hidden="true">
+						<span class="hero__badge-dot-ping"></span>
+						<span class="hero__badge-dot-inner"></span>
+					</span>
+					Disponível para novos projetos
+				</p>
 
-    <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+				<h1 class="hero__name" id="heroTitle">Guilherme Mais</h1>
 
-  
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <ul role="list">
-      <li><a href="#about"    class="mobile-link">Sobre</a></li>
-      <li><a href="#skills"   class="mobile-link">Skills</a></li>
-      <li><a href="#projects" class="mobile-link">Projetos</a></li>
-      <li><a href="#contact"  class="mobile-link">Contato</a></li>
-    </ul>
-  </div>
+				<p class="hero__role">
+					Programador e estudante de <span class="hero__role-highlight">Engenharia da Computação</span><span class="typing-caret" aria-hidden="true">|</span>
+				</p>
 
-  
-  <section class="hero" id="hero" aria-label="Introdução">
-    
-    <canvas id="shader-canvas" aria-hidden="true"></canvas>
+				<div class="hero__actions">
+					<a href="#projetos" class="btn btn--primary">
+						Ver projetos
+						<svg class="btn__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+					</a>
+					<a href="#contato" class="btn btn--outline">Entrar em contato</a>
+				</div>
+			</div>
+		</section>
 
-    <div class="hero__content">
-      
-      <div class="hero__badge">
-        <div class="hero__badge-dot" aria-hidden="true">
-          <div class="hero__badge-dot-ping"></div>
-          <div class="hero__badge-dot-inner"></div>
-        </div>
-        Disponível para Novos Projetos
-      </div>
+		<section class="about section reveal-on-scroll" id="sobre" aria-labelledby="aboutTitle">
+			<div class="container">
+				<div class="about__grid">
+					<figure class="about__image-wrap">
+						<div class="about__image-frame">
+							<img
+								src="imagens/IMG_1000.png"
+								alt="Foto de perfil de Guilherme Carvalho Mais"
+								class="about__img"
+								width="480"
+								height="600"
+								loading="lazy"
+								decoding="async"
+							>
+						</div>
+					</figure>
 
-      <h1 class="hero__name"><em>Guilherme Mais</em></h1>
+					<div class="about__text">
+						<p class="section-label">Sobre mim</p>
+						<h2 class="section-title" id="aboutTitle">Programador e estudante de <em>Engenharia da Computação</em></h2>
 
-      <p class="hero__role">
-        Desenvolvedor <span class="typed-text" id="typedText" aria-live="polite"></span><span class="cursor-blink" aria-hidden="true">|</span>
-      </p>
+						<p class="about__paragraph">Sou estudante de Engenharia da Computação na PUC-Campinas, com formação técnica em lógica computacional, sistemas embarcados, eletrônica digital e desenvolvimento de software. Programo em C, Java, Python, JavaScript, HTML5 e CSS, e consolido esse aprendizado em projetos acadêmicos e iniciativas próprias.</p>
+						<p class="about__paragraph">Direciono minha trajetória para a Cibersegurança, área que considero estratégica para proteger sistemas, dados e infraestruturas críticas. Meu objetivo é aliar profundidade técnica a uma visão aplicada, contribuindo para soluções seguras e confiáveis.</p>
+						<p class="about__paragraph">Na Liga de TI e Empreendedorismo da PUC-Campinas, sou Vice-Diretor de Eventos, cargo que assumi após um semestre como membro da área. Falo português, espanhol avançado e inglês intermediário.</p>
 
-      <div class="hero__actions">
-        
-        <a href="#projects" class="btn-glass" aria-label="Ver projetos">
-          <div class="btn-glass-layer" aria-hidden="true"></div>
-          <span>Ver Projetos</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
-        <a href="#contact" class="btn btn--outline">Entre em Contato</a>
-      </div>
-    </div>
+						<ul class="social-list about__social-list" aria-label="Redes sociais">
+							<li>
+								<a href="https://www.instagram.com/gui_.mais/" target="_blank" rel="noopener noreferrer me" class="social-list__link">
+									<img src="imagens/instagram.png" alt="Instagram de Guilherme" width="24" height="24" loading="lazy" decoding="async">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/guilheme-carvalho-mais" target="_blank" rel="noopener noreferrer me" class="social-list__link">
+									<img src="imagens/linkedln.png" alt="LinkedIn de Guilherme" width="24" height="24" loading="lazy" decoding="async">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <div class="hero__scroll-hint" aria-hidden="true">
-      <span>scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
+		<section class="experience section" id="experiencia" aria-labelledby="experienceTitle">
+			<div class="container">
+				<div class="section-split">
+					<header class="section-split__intro reveal-on-scroll">
+						<p class="section-label">Trajetória</p>
+						<h2 class="section-title" id="experienceTitle">Minha <em>Experiência</em></h2>
+					</header>
 
-  
-  <section class="about section reveal" id="about" aria-label="Sobre mim">
-    <div class="container">
-      <div class="about__grid">
+					<ol class="experience-list reveal-on-scroll">
+						<li>
+							<article class="experience-entry" aria-labelledby="experienceLigaTitle">
+								<header class="experience-entry__header">
+									<p class="experience-entry__period"><time datetime="2026-08">Ago 2026</time> – Presente</p>
+									<h3 class="experience-entry__role" id="experienceLigaTitle">Vice-Diretor de Eventos</h3>
+									<p class="experience-entry__organization">Liga de TI e Empreendedorismo · PUC-Campinas</p>
+								</header>
 
-        <div class="about__image-wrap">
-          <div class="about__image-frame">
-            <img src="imagens/IMG_1118.PNG" alt="Foto de perfil de Guilherme Carvalho Mais" class="about__img" loading="lazy" />
-            <div class="about__badge" aria-label="2 anos de experiência">
-              <span class="badge-num">2+</span>
-              <span class="badge-text">Anos de<br/>experiência</span>
-            </div>
-          </div>
-        </div>
+								<ul class="experience-entry__highlights">
+									<li>Coordenei a realização de um hackathon em parceria com outras empresas, reunindo 24 participantes, com atuação na definição do formato, na logística e na condução do evento.</li>
+									<li>Organizo palestras e workshops de tecnologia para a comunidade universitária, do contato com os palestrantes até a execução no dia.</li>
+									<li>Atuo na diretoria de Eventos de uma entidade estudantil sem fins lucrativos, organizada por áreas e voltada ao aprofundamento prático em Tecnologia da Informação.</li>
+								</ul>
+							</article>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
 
-        <div class="about__text">
-          <span class="section-label">Sobre mim</span>
-          <h2 class="section-title">Apaixonado por criar<br /><em>experiências digitais</em></h2>
+		<section class="skills section" id="habilidades" aria-labelledby="skillsTitle">
+			<div class="container">
+				<div class="section-split">
+					<header class="section-split__intro reveal-on-scroll">
+						<p class="section-label">Tecnologias</p>
+						<h2 class="section-title" id="skillsTitle">Minhas <em>Habilidades</em></h2>
+					</header>
 
-          <p class="about__p">Sou um desenvolvedor front-end focado em construir interfaces limpas, acessíveis e de alto desempenho. Acredito que bom código e bom design andam lado a lado.</p>
-          <p class="about__p">Trabalho com as tecnologias mais modernas do mercado, sempre buscando soluções criativas e eficientes para cada desafio.</p>
+					<div class="skills__groups reveal-on-scroll">
+						<div class="skill-group">
+							<h3 class="skill-group__title" id="skillGroupWebTitle">Web</h3>
+							<ul class="skill-group__list" aria-labelledby="skillGroupWebTitle">
+								<li class="skill-badge skill-badge--html">HTML5</li>
+								<li class="skill-badge skill-badge--css">CSS3</li>
+								<li class="skill-badge skill-badge--javascript">JavaScript</li>
+							</ul>
+						</div>
 
-          <div class="about__stats" aria-label="Estatísticas">
-            <div class="stat">
-              <span class="stat__num">4+</span>
-              <span class="stat__label">Projetos</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num">100%</span>
-              <span class="stat__label">Dedicação</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num">5★</span>
-              <span class="stat__label">Qualidade</span>
-            </div>
-          </div>
+						<div class="skill-group">
+							<h3 class="skill-group__title" id="skillGroupLowLevelTitle">Low-Level, Hardware &amp; OOP</h3>
+							<ul class="skill-group__list" aria-labelledby="skillGroupLowLevelTitle">
+								<li class="skill-badge skill-badge--c">C</li>
+								<li class="skill-badge skill-badge--java">Java</li>
+								<li class="skill-badge skill-badge--python">Python</li>
+								<li class="skill-badge skill-badge--assembly">Assembly</li>
+								<li class="skill-badge skill-badge--vhdl">VHDL</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-          <div class="about__socials" aria-label="Redes sociais">
-            <a href="https://www.instagram.com/gui_.mais/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-              <img src="imagens/instagram.png" alt="Instagram" loading="lazy" />
-            </a>
-            <a href="https://www.linkedin.com/in/guilheme-carvalho-mais" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-              <img src="imagens/linkedln.png" alt="LinkedIn" loading="lazy" />
-            </a>
-          </div>
-        </div>
+		<section class="projects section" id="projetos" aria-labelledby="projectsTitle">
+			<div class="container">
+				<header class="section-header reveal-on-scroll">
+					<p class="section-label">Trabalhos</p>
+					<h2 class="section-title" id="projectsTitle">Projetos em <em>destaque</em></h2>
+				</header>
 
-      </div>
-    </div>
-  </section>
+				<ol class="timeline reveal-on-scroll">
+					<li class="timeline__item">
+						<article class="timeline__entry" aria-labelledby="projectMapsLinkTitle">
+							<p class="timeline__date"><time datetime="2025">2025</time> · PUC-Campinas</p>
+							<h3 class="timeline__title" id="projectMapsLinkTitle">MapsLink</h3>
+							<p class="timeline__description">Plataforma web de empregabilidade e networking B2B com mapa interativo geolocalizado. Permite descobrir empresas, vagas e eventos no mapa, com filtros por setor, cidade e palavra-chave.</p>
+							<ul class="timeline__tags" aria-label="Tecnologias utilizadas">
+								<li class="tag">HTML5</li>
+								<li class="tag">CSS3</li>
+								<li class="tag">JavaScript</li>
+								<li class="tag">Leaflet.js</li>
+								<li class="tag">PWA</li>
+								<li class="tag">Figma</li>
+							</ul>
+							<a href="https://github.com/guimais/mapslink" target="_blank" rel="noopener noreferrer" class="timeline__link">
+								<svg class="timeline__link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-github"/></svg>
+								Ver no GitHub<span class="visually-hidden">: projeto MapsLink (abre em nova aba)</span>
+								<svg class="timeline__link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+							</a>
+						</article>
+					</li>
 
-  
-  <section class="skills section" id="skills" aria-label="Habilidades técnicas">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Tecnologias</span>
-        <h2 class="section-title">Minhas <em>Skills</em></h2>
-      </div>
+					<li class="timeline__item">
+						<article class="timeline__entry" aria-labelledby="projectSalesPanelTitle">
+							<p class="timeline__date"><time datetime="2025">2025</time></p>
+							<h3 class="timeline__title" id="projectSalesPanelTitle">Painel Comercial</h3>
+							<p class="timeline__description">Painel visual para controle de leads com pipeline, SLAs e indicadores de conversão. Feito para equipes comerciais, com filtros por status, responsável, mês e ano.</p>
+							<ul class="timeline__tags" aria-label="Tecnologias utilizadas">
+								<li class="tag">HTML5</li>
+								<li class="tag">CSS3</li>
+								<li class="tag">JavaScript</li>
+							</ul>
+							<a href="https://github.com/guimais/painel-comercial" target="_blank" rel="noopener noreferrer" class="timeline__link">
+								<svg class="timeline__link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-github"/></svg>
+								Ver no GitHub<span class="visually-hidden">: projeto Painel Comercial (abre em nova aba)</span>
+								<svg class="timeline__link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+							</a>
+						</article>
+					</li>
+				</ol>
+			</div>
+		</section>
 
-      <div class="skills__grid reveal">
+		<section class="contact section" id="contato" aria-labelledby="contactTitle">
+			<div class="container">
+				<div class="contact__inner">
+					<div class="contact__intro reveal-on-scroll">
+						<p class="section-label">Contato</p>
+						<h2 class="section-title" id="contactTitle">Vamos trabalhar <em>juntos?</em></h2>
+						<p class="contact__description">Estou disponível para projetos freelance, oportunidades de emprego e colaborações. Manda uma mensagem!</p>
 
-        <div class="skill-card">
-          <div class="skill-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3 class="skill-card__name">HTML5</h3>
-          <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5: 95%">
-            <div class="skill-bar__fill" data-width="95"></div>
-          </div>
-          <span class="skill-card__percent">95%</span>
-        </div>
+						<address class="contact__info">
+							<p class="contact__info-item">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+								<a href="mailto:guicarvalhomais@gmail.com">guicarvalhomais@gmail.com</a>
+							</p>
+							<p class="contact__info-item">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+								<span>Brasil, disponível remotamente</span>
+							</p>
+						</address>
 
-        <div class="skill-card">
-          <div class="skill-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
-          <h3 class="skill-card__name">CSS3</h3>
-          <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3: 90%">
-            <div class="skill-bar__fill" data-width="90"></div>
-          </div>
-          <span class="skill-card__percent">90%</span>
-        </div>
+						<ul class="social-list" aria-label="Redes sociais">
+							<li>
+								<a href="https://www.instagram.com/gui_.mais/" target="_blank" rel="noopener noreferrer me" class="social-list__link">
+									<img src="imagens/instagram.png" alt="Instagram de Guilherme" width="24" height="24" loading="lazy" decoding="async">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/guilheme-carvalho-mais" target="_blank" rel="noopener noreferrer me" class="social-list__link">
+									<img src="imagens/linkedln.png" alt="LinkedIn de Guilherme" width="24" height="24" loading="lazy" decoding="async">
+								</a>
+							</li>
+						</ul>
+					</div>
 
-        <div class="skill-card">
-          <div class="skill-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </div>
-          <h3 class="skill-card__name">JavaScript</h3>
-          <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript: 85%">
-            <div class="skill-bar__fill" data-width="85"></div>
-          </div>
-          <span class="skill-card__percent">85%</span>
-        </div>
+					<form class="contact__form reveal-on-scroll" id="contactForm" method="post" novalidate aria-labelledby="contactTitle">
+						<div class="form-group">
+							<label for="contactName">Nome</label>
+							<input type="text" id="contactName" name="name" placeholder="Seu nome completo" autocomplete="name" maxlength="100" required aria-describedby="contactNameError">
+							<span class="form-error" id="contactNameError" role="alert"></span>
+						</div>
 
-        <div class="skill-card">
-          <div class="skill-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 12l9-3"/><path d="M12 2v10"/></svg>
-          </div>
-          <h3 class="skill-card__name">React</h3>
-          <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="React: 75%">
-            <div class="skill-bar__fill" data-width="75"></div>
-          </div>
-          <span class="skill-card__percent">75%</span>
-        </div>
+						<div class="form-group">
+							<label for="contactEmail">E-mail</label>
+							<input type="email" id="contactEmail" name="email" placeholder="seu@email.com" autocomplete="email" inputmode="email" maxlength="150" required aria-describedby="contactEmailError">
+							<span class="form-error" id="contactEmailError" role="alert"></span>
+						</div>
 
-        <div class="skill-card">
-          <div class="skill-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-          </div>
-          <h3 class="skill-card__name">Git & GitHub</h3>
-          <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Git e GitHub: 80%">
-            <div class="skill-bar__fill" data-width="80"></div>
-          </div>
-          <span class="skill-card__percent">80%</span>
-        </div>
+						<div class="form-group">
+							<label for="contactSubject">Assunto <span class="form-optional">(opcional)</span></label>
+							<input type="text" id="contactSubject" name="subject" placeholder="Ex.: Projeto freelance" maxlength="150">
+						</div>
 
-        <div class="skill-card">
-          <div class="skill-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9"/><path d="M18 3v6h-6"/></svg>
-          </div>
-          <h3 class="skill-card__name">Figma</h3>
-          <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Figma: 70%">
-            <div class="skill-bar__fill" data-width="70"></div>
-          </div>
-          <span class="skill-card__percent">70%</span>
-        </div>
+						<div class="form-group">
+							<label for="contactMessage">Mensagem</label>
+							<textarea id="contactMessage" name="message" rows="5" placeholder="Conte-me sobre seu projeto..." maxlength="2000" required aria-describedby="contactMessageError"></textarea>
+							<span class="form-error" id="contactMessageError" role="alert"></span>
+						</div>
 
-      </div>
-    </div>
-  </section>
+						<button type="submit" class="btn btn--primary btn--full" id="contactSubmitButton">
+							Enviar mensagem
+							<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+						</button>
 
-  
-  <section class="projects section" id="projects" aria-label="Projetos em destaque">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Trabalhos</span>
-        <h2 class="section-title">Projetos em <em>Destaque</em></h2>
-      </div>
+						<p class="form-success" id="contactSuccessMessage" role="status" aria-live="polite">Mensagem enviada! Retornarei em breve.</p>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
 
-      <div class="projects__grid reveal">
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<a href="#inicio" class="footer__logo">Guilherme C. Mais</a>
 
-        
-        <article class="project-card project-card--featured" data-glow>
-          <div data-glow class="project-card__glow-inner"></div>
-          <div class="project-card__img-wrap">
-            <div class="project-card__img project-card__img--mapslink">
-              <img src="imagens/Logo Final - Maps Link.png" alt="Logo do projeto MapsLink" class="project-card__cover" loading="lazy" />
-            </div>
-          </div>
-          <div class="project-card__info">
-            <div class="project-card__meta">
-              <div class="project-card__tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">JS</span>
-                <span class="tag">Leaflet.js</span>
-                <span class="tag">PWA</span>
-                <span class="tag">Figma</span>
-              </div>
-              <span class="project-card__year">2025 · PUC-Campinas</span>
-            </div>
-            <h3 class="project-card__title">MapsLink</h3>
-            <p class="project-card__desc">Plataforma web de empregabilidade e networking B2B com <strong>mapa interativo geolocalizado</strong>. Permite descobrir empresas, vagas e eventos no mapa, com filtros dinâmicos por setor, cidade e palavra-chave.</p>
-            <ul class="project-card__highlights">
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Mapa interativo — Leaflet.js + OpenStreetMap</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Filtros em tempo real por setor, cidade e keywords</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Arquitetura SPA, PWA-ready e 100% responsivo</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Lighthouse Acessibilidade &gt; 95%</li>
-            </ul>
-            <a href="https://github.com/guimais/mapslink" target="_blank" rel="noopener noreferrer" class="project-card__github" aria-label="Ver MapsLink no GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              Ver no GitHub
-              <svg class="project-card__github-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-            </a>
-          </div>
-        </article>
+				<p class="footer__copy">&copy; <span id="footerCurrentYear">2026</span> Guilherme Carvalho Mais. Todos os direitos reservados.</p>
 
-        
-        <article class="project-card project-card--featured" data-glow>
-          <div data-glow class="project-card__glow-inner"></div>
-          <div class="project-card__img-wrap">
-            <div class="project-card__img project-card__img--painel">
-              <svg class="painel-illustration" viewBox="0 0 520 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="24" y="24" width="472" height="252" rx="10" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
-                <rect x="40" y="40" width="100" height="56" rx="8" fill="rgba(255,255,255,.07)"/>
-                <text x="52" y="62" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,.4)">LEADS ATIVOS</text>
-                <text x="52" y="82" font-family="sans-serif" font-size="20" font-weight="700" fill="white">148</text>
-                <rect x="156" y="40" width="100" height="56" rx="8" fill="rgba(255,255,255,.07)"/>
-                <text x="168" y="62" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,.4)">CONVERSÃO</text>
-                <text x="168" y="82" font-family="sans-serif" font-size="20" font-weight="700" fill="#4ade80">32%</text>
-                <rect x="272" y="40" width="100" height="56" rx="8" fill="rgba(255,255,255,.07)"/>
-                <text x="284" y="62" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,.4)">RECEITA ESP.</text>
-                <text x="284" y="82" font-family="sans-serif" font-size="16" font-weight="700" fill="white">R$84k</text>
-                <rect x="388" y="40" width="100" height="56" rx="8" fill="rgba(255,255,255,.07)"/>
-                <text x="400" y="62" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,.4)">SLA VENCIDO</text>
-                <text x="400" y="82" font-family="sans-serif" font-size="20" font-weight="700" fill="#FF4D4D">12</text>
-                <rect x="40" y="112" width="448" height="18" rx="4" fill="rgba(255,255,255,.06)"/>
-                <rect x="40" y="136" width="448" height="14" rx="3" fill="rgba(255,255,255,.03)"/>
-                <rect x="40" y="156" width="448" height="14" rx="3" fill="rgba(255,255,255,.03)"/>
-                <rect x="40" y="176" width="448" height="14" rx="3" fill="rgba(255,255,255,.03)"/>
-                <rect x="40" y="196" width="448" height="14" rx="3" fill="rgba(255,255,255,.03)"/>
-                <rect x="48" y="140" width="48" height="6" rx="3" fill="rgba(255,255,255,.15)"/>
-                <rect x="48" y="160" width="64" height="6" rx="3" fill="rgba(255,255,255,.10)"/>
-                <rect x="48" y="180" width="40" height="6" rx="3" fill="rgba(255,255,255,.10)"/>
-                <rect x="48" y="200" width="56" height="6" rx="3" fill="rgba(255,255,255,.10)"/>
-                <rect x="200" y="140" width="36" height="6" rx="3" fill="rgba(74,222,128,.4)"/>
-                <rect x="200" y="160" width="36" height="6" rx="3" fill="rgba(251,191,36,.4)"/>
-                <rect x="200" y="180" width="36" height="6" rx="3" fill="rgba(255,77,77,.4)"/>
-                <rect x="200" y="200" width="36" height="6" rx="3" fill="rgba(74,222,128,.4)"/>
-                <rect x="360" y="136" width="80" height="8" rx="4" fill="rgba(255,255,255,.06)"/>
-                <rect x="360" y="136" width="52" height="8" rx="4" fill="rgba(74,222,128,.5)"/>
-                <rect x="360" y="156" width="80" height="8" rx="4" fill="rgba(255,255,255,.06)"/>
-                <rect x="360" y="156" width="30" height="8" rx="4" fill="rgba(251,191,36,.5)"/>
-                <rect x="360" y="176" width="80" height="8" rx="4" fill="rgba(255,255,255,.06)"/>
-                <rect x="360" y="176" width="65" height="8" rx="4" fill="rgba(74,222,128,.5)"/>
-                <rect x="360" y="196" width="80" height="8" rx="4" fill="rgba(255,255,255,.06)"/>
-                <rect x="360" y="196" width="20" height="8" rx="4" fill="rgba(255,77,77,.5)"/>
-                <text x="40" y="258" font-family="sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,.2)">Painel Comercial de Leads</text>
-              </svg>
-            </div>
-          </div>
-          <div class="project-card__info">
-            <div class="project-card__meta">
-              <div class="project-card__tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">JavaScript</span>
-              </div>
-              <span class="project-card__year">2025</span>
-            </div>
-            <h3 class="project-card__title">Painel Comercial</h3>
-            <p class="project-card__desc">Painel visual para controle de leads com <strong>pipeline, SLAs e indicadores de conversão</strong>. Desenvolvido para equipes comerciais com filtros por status, responsável, mês e ano.</p>
-            <ul class="project-card__highlights">
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Tabela de leads com filtros dinâmicos em tempo real</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Indicadores de SLA, receita esperada e conversão</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Interface limpa e responsiva para uso comercial</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Deploy via GitHub Pages</li>
-            </ul>
-            <a href="https://github.com/guimais/painel-comercial" target="_blank" rel="noopener noreferrer" class="project-card__github" aria-label="Ver Painel Comercial no GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              Ver no GitHub
-              <svg class="project-card__github-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-            </a>
-          </div>
-        </article>
+				<nav class="footer__links" aria-label="Links do rodapé">
+					<a href="#sobre">sobre</a>
+					<a href="#experiencia">experiência</a>
+					<a href="#projetos">projetos</a>
+					<a href="#contato">contato</a>
+				</nav>
+			</div>
+		</div>
+	</footer>
 
-        
-        <article class="project-card project-card--featured" data-glow>
-          <div data-glow class="project-card__glow-inner"></div>
-          <div class="project-card__img-wrap">
-            <div class="project-card__img project-card__img--luminia">
-              <svg class="luminia-illustration" viewBox="0 0 520 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="520" height="300" fill="#1a1208"/>
-                <rect x="0" y="0" width="520" height="72" fill="#0f0b05"/>
-                <rect x="32" y="24" width="80" height="24" rx="4" fill="rgba(255,255,255,.06)"/>
-                <rect x="36" y="30" width="48" height="6" rx="3" fill="rgba(255,255,255,.2)"/>
-                <rect x="36" y="40" width="32" height="4" rx="2" fill="rgba(200,180,140,.15)"/>
-                <rect x="320" y="26" width="56" height="20" rx="10" fill="rgba(74,111,74,.5)"/>
-                <text x="334" y="40" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,.7)">Agendar</text>
-                <rect x="386" y="26" width="44" height="20" rx="10" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
-                <text x="396" y="40" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,.4)">Contato</text>
-                <rect x="32" y="90" width="220" height="180" rx="8" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
-                <rect x="48" y="108" width="140" height="8" rx="4" fill="rgba(200,180,140,.35)"/>
-                <rect x="48" y="122" width="100" height="5" rx="2.5" fill="rgba(200,180,140,.15)"/>
-                <rect x="48" y="134" width="120" height="5" rx="2.5" fill="rgba(200,180,140,.10)"/>
-                <rect x="48" y="146" width="90" height="5" rx="2.5" fill="rgba(200,180,140,.10)"/>
-                <rect x="48" y="166" width="80" height="28" rx="14" fill="rgba(74,111,74,.6)"/>
-                <text x="60" y="184" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,.8)">Agendar</text>
-                <rect x="48" y="210" width="48" height="40" rx="6" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
-                <text x="56" y="226" font-family="sans-serif" font-size="14" font-weight="700" fill="rgba(200,180,140,.7)">15k</text>
-                <text x="53" y="240" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.3)">Pacientes</text>
-                <rect x="106" y="210" width="48" height="40" rx="6" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
-                <text x="114" y="226" font-family="sans-serif" font-size="14" font-weight="700" fill="rgba(200,180,140,.7)">20+</text>
-                <text x="112" y="240" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.3)">Especialistas</text>
-                <rect x="164" y="210" width="48" height="40" rx="6" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
-                <text x="172" y="226" font-family="sans-serif" font-size="14" font-weight="700" fill="rgba(200,180,140,.7)">98%</text>
-                <text x="170" y="240" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.3)">Satisfação</text>
-                <rect x="268" y="90" width="220" height="88" rx="8" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
-                <text x="284" y="112" font-family="sans-serif" font-size="9" fill="rgba(200,180,140,.5)">ESPECIALIDADES</text>
-                <rect x="284" y="122" width="56" height="20" rx="6" fill="rgba(74,111,74,.2)" stroke="rgba(74,111,74,.3)" stroke-width="1"/>
-                <text x="296" y="136" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.5)">Cardiologia</text>
-                <rect x="348" y="122" width="56" height="20" rx="6" fill="rgba(74,111,74,.2)" stroke="rgba(74,111,74,.3)" stroke-width="1"/>
-                <text x="358" y="136" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.5)">Neurologia</text>
-                <rect x="412" y="122" width="56" height="20" rx="6" fill="rgba(74,111,74,.2)" stroke="rgba(74,111,74,.3)" stroke-width="1"/>
-                <text x="422" y="136" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.5)">Ortopedia</text>
-                <rect x="284" y="150" width="56" height="20" rx="6" fill="rgba(74,111,74,.2)" stroke="rgba(74,111,74,.3)" stroke-width="1"/>
-                <text x="294" y="164" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.5)">Dermatologia</text>
-                <rect x="348" y="150" width="56" height="20" rx="6" fill="rgba(74,111,74,.2)" stroke="rgba(74,111,74,.3)" stroke-width="1"/>
-                <text x="358" y="164" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.5)">Pediatria</text>
-                <rect x="268" y="188" width="220" height="82" rx="8" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
-                <text x="284" y="208" font-family="sans-serif" font-size="9" fill="rgba(200,180,140,.5)">AGENDAMENTO</text>
-                <rect x="284" y="216" width="88" height="10" rx="3" fill="rgba(255,255,255,.06)"/>
-                <rect x="284" y="216" width="40" height="10" rx="3" fill="rgba(255,255,255,.08)"/>
-                <rect x="284" y="232" width="88" height="10" rx="3" fill="rgba(255,255,255,.06)"/>
-                <rect x="380" y="216" width="88" height="10" rx="3" fill="rgba(255,255,255,.06)"/>
-                <rect x="380" y="232" width="88" height="10" rx="3" fill="rgba(255,255,255,.06)"/>
-                <rect x="284" y="248" width="184" height="14" rx="7" fill="rgba(74,111,74,.5)"/>
-                <text x="352" y="259" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.8)">Confirmar Agendamento</text>
-                <text x="32" y="285" font-family="sans-serif" font-size="9" font-weight="600" fill="rgba(200,180,140,.2)">Clínica Luminia</text>
-              </svg>
-            </div>
-          </div>
-          <div class="project-card__info">
-            <div class="project-card__meta">
-              <div class="project-card__tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">JavaScript</span>
-              </div>
-              <span class="project-card__year">2025</span>
-            </div>
-            <h3 class="project-card__title">Clínica Luminia</h3>
-            <p class="project-card__desc">Landing page profissional para clínica médica com foco em <strong>confiança, sofisticação e acolhimento</strong>. Especialidades, equipe, depoimentos, FAQ e formulário com validação completa.</p>
-            <ul class="project-card__highlights">
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Contadores animados via IntersectionObserver</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Carrossel de depoimentos e acordeão de FAQ</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Formulário com máscara de telefone e validação</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>JSON-LD para SEO e semântica acessível</li>
-            </ul>
-            <a href="https://github.com/guimais/projeto-clinica-luminia" target="_blank" rel="noopener noreferrer" class="project-card__github" aria-label="Ver Clínica Luminia no GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              Ver no GitHub
-              <svg class="project-card__github-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-            </a>
-          </div>
-        </article>
-
-        
-        <article class="project-card project-card--featured" data-glow>
-          <div data-glow class="project-card__glow-inner"></div>
-          <div class="project-card__img-wrap">
-            <div class="project-card__img project-card__img--dashboard">
-              <svg class="dashboard-illustration" viewBox="0 0 520 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="520" height="300" fill="#0a0f1e"/>
-                <rect x="0" y="0" width="100" height="300" fill="#0d1426"/>
-                <rect x="16" y="24" width="68" height="28" rx="6" fill="rgba(99,179,237,.15)"/>
-                <text x="28" y="43" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(99,179,237,.8)">NEXUS</text>
-                <rect x="16" y="72" width="68" height="20" rx="4" fill="rgba(99,179,237,.2)"/>
-                <rect x="22" y="78" width="8" height="8" rx="2" fill="rgba(99,179,237,.6)"/>
-                <text x="34" y="86" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.7)">Visão Geral</text>
-                <rect x="16" y="98" width="68" height="20" rx="4" fill="transparent"/>
-                <rect x="22" y="104" width="8" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
-                <text x="34" y="112" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.3)">Análises</text>
-                <rect x="16" y="122" width="68" height="20" rx="4" fill="transparent"/>
-                <rect x="22" y="128" width="8" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
-                <text x="34" y="136" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.3)">Pedidos</text>
-                <rect x="116" y="20" width="96" height="52" rx="8" fill="rgba(99,179,237,.08)" stroke="rgba(99,179,237,.15)" stroke-width="1"/>
-                <text x="128" y="38" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">RECEITA</text>
-                <text x="128" y="56" font-family="sans-serif" font-size="16" font-weight="700" fill="white">R$248k</text>
-                <rect x="220" y="20" width="96" height="52" rx="8" fill="rgba(99,179,237,.08)" stroke="rgba(99,179,237,.15)" stroke-width="1"/>
-                <text x="232" y="38" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">PEDIDOS</text>
-                <text x="232" y="56" font-family="sans-serif" font-size="16" font-weight="700" fill="white">1.284</text>
-                <rect x="324" y="20" width="96" height="52" rx="8" fill="rgba(99,179,237,.08)" stroke="rgba(99,179,237,.15)" stroke-width="1"/>
-                <text x="336" y="38" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">CLIENTES</text>
-                <text x="336" y="56" font-family="sans-serif" font-size="16" font-weight="700" fill="white">3.741</text>
-                <rect x="428" y="20" width="76" height="52" rx="8" fill="rgba(99,179,237,.08)" stroke="rgba(99,179,237,.15)" stroke-width="1"/>
-                <text x="440" y="38" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">CONVERSÃO</text>
-                <text x="440" y="56" font-family="sans-serif" font-size="16" font-weight="700" fill="#68d391">4.2%</text>
-                <rect x="116" y="84" width="268" height="120" rx="8" fill="rgba(99,179,237,.05)" stroke="rgba(99,179,237,.12)" stroke-width="1"/>
-                <text x="128" y="100" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">RECEITA SEMANAL</text>
-                <polyline points="128,190 168,165 208,175 248,145 288,155 328,130 368,140" stroke="rgba(99,179,237,.6)" stroke-width="2" fill="none"/>
-                <polygon points="128,190 168,165 208,175 248,145 288,155 328,130 368,140 368,195 128,195" fill="rgba(99,179,237,.08)"/>
-                <line x1="128" y1="195" x2="368" y2="195" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
-                <rect x="392" y="84" width="112" height="120" rx="8" fill="rgba(99,179,237,.05)" stroke="rgba(99,179,237,.12)" stroke-width="1"/>
-                <text x="404" y="100" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">CATEGORIAS</text>
-                <circle cx="448" cy="152" r="28" fill="none" stroke="rgba(99,179,237,.5)" stroke-width="8" stroke-dasharray="44 88"/>
-                <circle cx="448" cy="152" r="28" fill="none" stroke="rgba(104,211,145,.5)" stroke-width="8" stroke-dasharray="30 102" stroke-dashoffset="-44"/>
-                <rect x="116" y="216" width="388" height="68" rx="8" fill="rgba(99,179,237,.05)" stroke="rgba(99,179,237,.12)" stroke-width="1"/>
-                <text x="128" y="232" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">PEDIDOS RECENTES</text>
-                <rect x="128" y="240" width="364" height="10" rx="3" fill="rgba(255,255,255,.04)"/>
-                <rect x="128" y="255" width="364" height="10" rx="3" fill="rgba(255,255,255,.04)"/>
-                <rect x="128" y="242" width="60" height="6" rx="3" fill="rgba(255,255,255,.12)"/>
-                <rect x="420" y="241" width="40" height="8" rx="4" fill="rgba(104,211,145,.25)"/>
-                <text x="428" y="249" font-family="sans-serif" font-size="7" fill="rgba(104,211,145,.8)">Pago</text>
-                <rect x="420" y="254" width="40" height="8" rx="4" fill="rgba(246,173,85,.25)"/>
-                <text x="424" y="262" font-family="sans-serif" font-size="7" fill="rgba(246,173,85,.8)">Pendente</text>
-                <text x="116" y="292" font-family="sans-serif" font-size="9" font-weight="600" fill="rgba(99,179,237,.2)">Nexus Corp — Dashboard</text>
-              </svg>
-            </div>
-          </div>
-          <div class="project-card__info">
-            <div class="project-card__meta">
-              <div class="project-card__tags">
-                <span class="tag">React</span>
-                <span class="tag">Vite</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">SVG</span>
-              </div>
-              <span class="project-card__year">2025</span>
-            </div>
-            <h3 class="project-card__title">Nexus Corp Dashboard</h3>
-            <p class="project-card__desc">Dashboard empresarial completo em <strong>React 18</strong> para a Nexus Corp. KPIs, gráficos SVG puros, tabela de pedidos, gestão de equipe e configurações — sem bibliotecas de UI externas.</p>
-            <ul class="project-card__highlights">
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Gráficos em SVG puro — sem libs externas</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>useState, useMemo e useEffect aplicados</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Sidebar fixa com 5 seções e busca/filtro</li>
-              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Build com Vite e deploy via GitHub Pages</li>
-            </ul>
-            <a href="https://github.com/guimais/dashboard-em-react" target="_blank" rel="noopener noreferrer" class="project-card__github" aria-label="Ver Nexus Dashboard no GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              Ver no GitHub
-              <svg class="project-card__github-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="contact section" id="contact" aria-label="Contato">
-    <div class="container">
-      <div class="contact__inner">
-
-        <div class="contact__left reveal">
-          <span class="section-label">Contato</span>
-          <h2 class="section-title">Vamos trabalhar<br /><em>juntos?</em></h2>
-          <p class="contact__desc">Estou disponível para projetos freelance, oportunidades de emprego e colaborações. Manda uma mensagem!</p>
-
-          <div class="contact__info">
-            <div class="contact__info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <span>guicarvalhomais@gmail.com</span>
-            </div>
-            <div class="contact__info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Brasil — Disponível Remotamente</span>
-            </div>
-          </div>
-
-          <div class="contact__socials">
-            <a href="https://www.instagram.com/gui_.mais/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Instagram">
-              <img src="imagens/instagram.png" alt="Instagram" loading="lazy" />
-            </a>
-            <a href="https://www.linkedin.com/in/guilheme-carvalho-mais" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="LinkedIn">
-              <img src="imagens/linkedln.png" alt="LinkedIn" loading="lazy" />
-            </a>
-          </div>
-        </div>
-
-        <form class="contact__form reveal" id="contactForm" novalidate aria-label="Formulário de contato">
-          <div class="form-group">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" placeholder="Seu nome completo" required autocomplete="name" />
-            <span class="form-error" id="nameError" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" />
-            <span class="form-error" id="emailError" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="subject">Assunto</label>
-            <input type="text" id="subject" name="subject" placeholder="Ex: Projeto freelance" />
-          </div>
-          <div class="form-group">
-            <label for="message">Mensagem</label>
-            <textarea id="message" name="message" rows="5" placeholder="Conte-me sobre seu projeto..." required></textarea>
-            <span class="form-error" id="messageError" role="alert"></span>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
-            <span>Enviar Mensagem</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-          <div class="form-success" id="formSuccess" role="status" aria-live="polite">✓ Mensagem enviada! Retornarei em breve.</div>
-        </form>
-
-      </div>
-    </div>
-  </section>
-
-  
-  <footer class="footer" aria-label="Rodapé">
-    <div class="container">
-      <div class="footer__inner">
-        <a href="#hero" class="footer__logo">
-          <span>Guilherme C. Mais</span>
-        </a>
-        <p class="footer__copy">&copy; <span id="year"></span> Guilherme Carvalho Mais. Todos os direitos reservados.</p>
-        <div class="footer__links">
-          <a href="#about">sobre</a>
-          <a href="#projects">projetos</a>
-          <a href="#contact">contato</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  
-  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="js/scripts.js"></script>
+	<button type="button" class="back-to-top" id="backToTopButton" aria-label="Voltar ao topo">
+		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+	</button>
 </body>
 </html>
