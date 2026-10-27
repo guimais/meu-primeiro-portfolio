@@ -39,21 +39,14 @@
 		<symbol id="icon-arrow-right" viewBox="0 0 16 16">
 			<path d="M3 8h10M9 4l4 4-4 4"/>
 		</symbol>
+		<symbol id="icon-chevron-right" viewBox="0 0 16 16">
+			<path d="M6 3l5 5-5 5"/>
+		</symbol>
 	</svg>
 
-	<header class="site-header">
+	<header>
 		<nav class="nav" id="siteNavigation" aria-label="Navegação principal">
 			<a href="#inicio" class="nav__logo" aria-label="Guilherme Mais, voltar ao início">Guilherme</a>
-
-			<ul class="nav__links">
-				<li><a href="#sobre" class="nav__link">Sobre</a></li>
-				<li><a href="#experiencia" class="nav__link">Experiência</a></li>
-				<li><a href="#habilidades" class="nav__link">Skills</a></li>
-				<li><a href="#projetos" class="nav__link">Projetos</a></li>
-				<li><a href="#contato" class="nav__link">Contato</a></li>
-			</ul>
-
-			<a href="#contato" class="nav__cta">Trabalhe comigo</a>
 
 			<button type="button" class="nav__toggle" id="mobileMenuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
 				<span aria-hidden="true"></span>
@@ -75,68 +68,63 @@
 
 	<main id="conteudo-principal">
 		<section class="hero" id="inicio" aria-labelledby="heroTitle">
+			<img
+				src="imagens/FOTO PORTFÓLIO.jpg"
+				alt=""
+				class="hero__background"
+				width="2576"
+				height="1438"
+				fetchpriority="high"
+				decoding="async"
+			>
+
+			<ul class="hero__social" aria-label="Contatos e redes sociais">
+				<li><a href="mailto:guicarvalhomais@gmail.com" class="hero__social-link">E-mail</a></li>
+				<li><a href="https://www.instagram.com/gui_.mais/" target="_blank" rel="noopener noreferrer me" class="hero__social-link">Instagram</a></li>
+				<li><a href="https://www.linkedin.com/in/guilheme-carvalho-mais" target="_blank" rel="noopener noreferrer me" class="hero__social-link">LinkedIn</a></li>
+				<li><a href="https://github.com/guimais" target="_blank" rel="noopener noreferrer me" class="hero__social-link">GitHub</a></li>
+			</ul>
+
 			<div class="hero__content">
-				<p class="hero__badge">
-					<span class="hero__badge-dot" aria-hidden="true">
-						<span class="hero__badge-dot-ping"></span>
-						<span class="hero__badge-dot-inner"></span>
-					</span>
-					Disponível para novos projetos
-				</p>
+				<h1 class="hero__title" id="heroTitle">
+					<span class="hero__title-line">Guilherme</span>
+					<span class="hero__title-line">Carvalho</span>
+					<span class="hero__title-line">Mais</span>
+				</h1>
 
-				<h1 class="hero__name" id="heroTitle">Guilherme Mais</h1>
+				<p class="hero__bio">Estudante de Engenharia da Computação na <span class="hero__nowrap">PUC-Campinas</span>, com foco em Cibersegurança. Disponível para novos projetos.</p>
 
-				<p class="hero__role">
-					Programador e estudante de <span class="hero__role-highlight">Engenharia da Computação</span><span class="typing-caret" aria-hidden="true">|</span>
-				</p>
-
-				<div class="hero__actions">
-					<a href="#projetos" class="btn btn--primary">
-						Ver projetos
-						<svg class="btn__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
-					</a>
-					<a href="#contato" class="btn btn--outline">Entrar em contato</a>
-				</div>
+				<a href="#projetos" class="hero__link">
+					Ver projetos
+					<svg class="hero__link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+				</a>
 			</div>
+
+			<nav class="hero__menu" aria-label="Seções do portfólio">
+				<ul class="hero__menu-list">
+					<li><a href="#sobre" class="hero__menu-link">Sobre</a></li>
+					<li><a href="#experiencia" class="hero__menu-link">Experiência</a></li>
+					<li><a href="#habilidades" class="hero__menu-link">Skills</a></li>
+					<li><a href="#projetos" class="hero__menu-link">Projetos</a></li>
+					<li><a href="#contato" class="hero__menu-link">Contato</a></li>
+				</ul>
+			</nav>
 		</section>
 
 		<section class="about section reveal-on-scroll" id="sobre" aria-labelledby="aboutTitle">
 			<div class="container">
-				<div class="about__grid">
-					<figure class="about__image-wrap">
-						<div class="about__image-frame">
-							<img
-								src="imagens/IMG_1000.png"
-								alt="Foto de perfil de Guilherme Carvalho Mais"
-								class="about__img"
-								width="480"
-								height="600"
-								loading="lazy"
-								decoding="async"
-							>
-						</div>
-					</figure>
+				<h2 class="about__statement" id="aboutTitle">Programador e estudante de <em>Engenharia da Computação</em>, com foco em Cibersegurança.</h2>
+
+				<div class="about__details">
+					<p class="about__caption">
+						<span>Sobre mim</span>
+						<span>Campinas, Brasil</span>
+					</p>
 
 					<div class="about__text">
-						<p class="section-label">Sobre mim</p>
-						<h2 class="section-title" id="aboutTitle">Programador e estudante de <em>Engenharia da Computação</em></h2>
-
 						<p class="about__paragraph">Sou estudante de Engenharia da Computação na PUC-Campinas, com formação técnica em lógica computacional, sistemas embarcados, eletrônica digital e desenvolvimento de software. Programo em C, Java, Python, JavaScript, HTML5 e CSS, e consolido esse aprendizado em projetos acadêmicos e iniciativas próprias.</p>
 						<p class="about__paragraph">Direciono minha trajetória para a Cibersegurança, área que considero estratégica para proteger sistemas, dados e infraestruturas críticas. Meu objetivo é aliar profundidade técnica a uma visão aplicada, contribuindo para soluções seguras e confiáveis.</p>
 						<p class="about__paragraph">Na Liga de TI e Empreendedorismo da PUC-Campinas, sou Vice-Diretor de Eventos, cargo que assumi após um semestre como membro da área. Falo português, espanhol avançado e inglês intermediário.</p>
-
-						<ul class="social-list about__social-list" aria-label="Redes sociais">
-							<li>
-								<a href="https://www.instagram.com/gui_.mais/" target="_blank" rel="noopener noreferrer me" class="social-list__link">
-									<img src="imagens/instagram.png" alt="Instagram de Guilherme" width="24" height="24" loading="lazy" decoding="async">
-								</a>
-							</li>
-							<li>
-								<a href="https://www.linkedin.com/in/guilheme-carvalho-mais" target="_blank" rel="noopener noreferrer me" class="social-list__link">
-									<img src="imagens/linkedln.png" alt="LinkedIn de Guilherme" width="24" height="24" loading="lazy" decoding="async">
-								</a>
-							</li>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -210,47 +198,86 @@
 					<p class="section-label">Trabalhos</p>
 					<h2 class="section-title" id="projectsTitle">Projetos em <em>destaque</em></h2>
 				</header>
+			</div>
 
-				<ol class="timeline reveal-on-scroll">
-					<li class="timeline__item">
-						<article class="timeline__entry" aria-labelledby="projectMapsLinkTitle">
-							<p class="timeline__date"><time datetime="2025">2025</time> · PUC-Campinas</p>
-							<h3 class="timeline__title" id="projectMapsLinkTitle">MapsLink</h3>
-							<p class="timeline__description">Plataforma web de empregabilidade e networking B2B com mapa interativo geolocalizado. Permite descobrir empresas, vagas e eventos no mapa, com filtros por setor, cidade e palavra-chave.</p>
-							<ul class="timeline__tags" aria-label="Tecnologias utilizadas">
-								<li class="tag">HTML5</li>
-								<li class="tag">CSS3</li>
-								<li class="tag">JavaScript</li>
-								<li class="tag">Leaflet.js</li>
-								<li class="tag">PWA</li>
-								<li class="tag">Figma</li>
-							</ul>
-							<a href="https://github.com/guimais/mapslink" target="_blank" rel="noopener noreferrer" class="timeline__link">
-								<svg class="timeline__link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-github"/></svg>
-								Ver no GitHub<span class="visually-hidden">: projeto MapsLink (abre em nova aba)</span>
-								<svg class="timeline__link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
-							</a>
+			<div class="projects-carousel reveal-on-scroll" id="projectsCarousel" role="region" aria-roledescription="carrossel" aria-label="Projetos em destaque">
+				<ol class="projects-carousel__track" id="projectsTrack">
+					<li class="projects-carousel__slide" aria-roledescription="slide">
+						<article class="project-card" aria-labelledby="projectMapsLinkTitle">
+							<figure class="project-card__media">
+								<img
+									src="imagens/projeto-mapslink.jpg"
+									alt="Tela do MapsLink com o mapa interativo de empresas, vagas e eventos"
+									class="project-card__img"
+									width="1600"
+									height="1000"
+									loading="lazy"
+									decoding="async"
+								>
+							</figure>
+
+							<div class="project-card__content">
+								<p class="project-card__label"><time datetime="2025">2025</time> · PUC-Campinas</p>
+								<h3 class="project-card__title" id="projectMapsLinkTitle">MapsLink</h3>
+								<p class="project-card__description">Plataforma web de empregabilidade e networking B2B com mapa interativo geolocalizado. Permite descobrir empresas, vagas e eventos no mapa, com filtros por setor, cidade e palavra-chave.</p>
+								<ul class="project-card__tags" aria-label="Tecnologias utilizadas">
+									<li class="tag">HTML5</li>
+									<li class="tag">CSS3</li>
+									<li class="tag">JavaScript</li>
+									<li class="tag">Leaflet.js</li>
+									<li class="tag">PWA</li>
+									<li class="tag">Figma</li>
+								</ul>
+								<a href="https://github.com/guimais/mapslink" target="_blank" rel="noopener noreferrer" class="project-card__link">
+									<svg class="project-card__link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-github"/></svg>
+									Ver no GitHub<span class="visually-hidden">: projeto MapsLink (abre em nova aba)</span>
+									<svg class="project-card__link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+								</a>
+							</div>
 						</article>
 					</li>
 
-					<li class="timeline__item">
-						<article class="timeline__entry" aria-labelledby="projectSalesPanelTitle">
-							<p class="timeline__date"><time datetime="2025">2025</time></p>
-							<h3 class="timeline__title" id="projectSalesPanelTitle">Painel Comercial</h3>
-							<p class="timeline__description">Painel visual para controle de leads com pipeline, SLAs e indicadores de conversão. Feito para equipes comerciais, com filtros por status, responsável, mês e ano.</p>
-							<ul class="timeline__tags" aria-label="Tecnologias utilizadas">
-								<li class="tag">HTML5</li>
-								<li class="tag">CSS3</li>
-								<li class="tag">JavaScript</li>
-							</ul>
-							<a href="https://github.com/guimais/painel-comercial" target="_blank" rel="noopener noreferrer" class="timeline__link">
-								<svg class="timeline__link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-github"/></svg>
-								Ver no GitHub<span class="visually-hidden">: projeto Painel Comercial (abre em nova aba)</span>
-								<svg class="timeline__link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
-							</a>
+					<li class="projects-carousel__slide" aria-roledescription="slide">
+						<article class="project-card" aria-labelledby="projectSalesPanelTitle">
+							<figure class="project-card__media">
+								<img
+									src="imagens/projeto-painel-comercial.jpg"
+									alt="Tela do Painel Comercial com pipeline de leads e indicadores de conversão"
+									class="project-card__img"
+									width="1600"
+									height="1000"
+									loading="lazy"
+									decoding="async"
+								>
+							</figure>
+
+							<div class="project-card__content">
+								<p class="project-card__label"><time datetime="2025">2025</time></p>
+								<h3 class="project-card__title" id="projectSalesPanelTitle">Painel Comercial</h3>
+								<p class="project-card__description">Painel visual para controle de leads com pipeline, SLAs e indicadores de conversão. Feito para equipes comerciais, com filtros por status, responsável, mês e ano.</p>
+								<ul class="project-card__tags" aria-label="Tecnologias utilizadas">
+									<li class="tag">HTML5</li>
+									<li class="tag">CSS3</li>
+									<li class="tag">JavaScript</li>
+								</ul>
+								<a href="https://github.com/guimais/painel-comercial" target="_blank" rel="noopener noreferrer" class="project-card__link">
+									<svg class="project-card__link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#icon-github"/></svg>
+									Ver no GitHub<span class="visually-hidden">: projeto Painel Comercial (abre em nova aba)</span>
+									<svg class="project-card__link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+								</a>
+							</div>
 						</article>
 					</li>
 				</ol>
+
+				<button type="button" class="projects-carousel__arrow projects-carousel__arrow--previous" id="projectsPreviousButton" aria-label="Projeto anterior" aria-controls="projectsTrack">
+					<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-chevron-right"/></svg>
+				</button>
+				<button type="button" class="projects-carousel__arrow projects-carousel__arrow--next" id="projectsNextButton" aria-label="Próximo projeto" aria-controls="projectsTrack">
+					<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#icon-chevron-right"/></svg>
+				</button>
+
+				<div class="projects-carousel__dots" id="projectsDots" role="group" aria-label="Escolher projeto"></div>
 			</div>
 		</section>
 

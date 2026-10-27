@@ -19,11 +19,17 @@ const mobileMenu = document.getElementById('mobileMenu');
 const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
 const backToTopButton = document.getElementById('backToTopButton');
 const revealElements = document.querySelectorAll('.reveal-on-scroll');
-const animatedButtons = document.querySelectorAll('.btn, .nav__cta, .back-to-top');
+const animatedButtons = document.querySelectorAll('.btn, .back-to-top');
 const contactForm = document.getElementById('contactForm');
 const contactSubmitButton = document.getElementById('contactSubmitButton');
 const contactSuccessMessage = document.getElementById('contactSuccessMessage');
 const footerCurrentYear = document.getElementById('footerCurrentYear');
+const projectsCarousel = document.getElementById('projectsCarousel');
+const projectsTrack = document.getElementById('projectsTrack');
+const projectSlides = document.querySelectorAll('.projects-carousel__slide');
+const projectsPreviousButton = document.getElementById('projectsPreviousButton');
+const projectsNextButton = document.getElementById('projectsNextButton');
+const projectsDotsContainer = document.getElementById('projectsDots');
 const submitButtonOriginalContent = contactSubmitButton ? contactSubmitButton.innerHTML : '';
 
 const contactFields = [
@@ -46,6 +52,10 @@ const contactFields = [
 		message: `A mensagem precisa ter pelo menos ${MINIMUM_MESSAGE_LENGTH} caracteres.`
 	}
 ];
+
+let projectsDots = [];
+let currentProjectIndex = 0;
+let isProjectsUpdateScheduled = false;
 
 function updateScrollState() {
 	const scrollPosition = window.scrollY;
@@ -149,6 +159,99 @@ function createButtonRipple(event) {
 	).onfinish = () => ripple.remove();
 }
 
+function getClosestProjectIndex() {
+	let closestIndex = 0;
+	let closestDistance = Infinity;
+
+	projectSlides.forEach((slide, index) => {
+		const distance = Math.abs(slide.offsetLeft - projectsTrack.scrollLeft);
+
+		if (distance < closestDistance) {
+			closestDistance = distance;
+			closestIndex = index;
+		}
+	});
+
+	return closestIndex;
+}
+
+function updateProjectsCarousel() {
+	currentProjectIndex = getClosestProjectIndex();
+	isProjectsUpdateScheduled = false;
+
+	projectSlides.forEach((slide, index) => {
+		slide.inert = index !== currentProjectIndex;
+	});
+
+	projectsDots.forEach((dot, index) => {
+		dot.setAttribute('aria-current', String(index === currentProjectIndex));
+	});
+}
+
+function scheduleProjectsUpdate() {
+	if (isProjectsUpdateScheduled) {
+		return;
+	}
+
+	isProjectsUpdateScheduled = true;
+	requestAnimationFrame(updateProjectsCarousel);
+}
+
+function goToProject(index) {
+	const targetIndex = (index + projectSlides.length) % projectSlides.length;
+
+	projectsTrack.scrollTo({
+		left: projectSlides[targetIndex].offsetLeft,
+		behavior: prefersReducedMotion ? 'auto' : 'smooth'
+	});
+}
+
+function showPreviousProject() {
+	goToProject(currentProjectIndex - 1);
+}
+
+function showNextProject() {
+	goToProject(currentProjectIndex + 1);
+}
+
+function handleProjectsKeydown(event) {
+	if (event.key === 'ArrowLeft') {
+		event.preventDefault();
+		showPreviousProject();
+	}
+
+	if (event.key === 'ArrowRight') {
+		event.preventDefault();
+		showNextProject();
+	}
+}
+
+function createProjectDot(index) {
+	const dot = document.createElement('button');
+
+	dot.type = 'button';
+	dot.className = 'projects-carousel__dot';
+	dot.setAttribute('aria-label', `Ir para o projeto ${index + 1}`);
+	dot.addEventListener('click', () => goToProject(index));
+	projectsDotsContainer.appendChild(dot);
+
+	return dot;
+}
+
+function startProjectsCarousel() {
+	projectSlides.forEach((slide, index) => {
+		slide.setAttribute('aria-label', `${index + 1} de ${projectSlides.length}`);
+		projectsDots.push(createProjectDot(index));
+	});
+
+	projectsCarousel.classList.add('projects-carousel--ready');
+	projectsTrack.addEventListener('scroll', scheduleProjectsUpdate, { passive: true });
+	projectsCarousel.addEventListener('keydown', handleProjectsKeydown);
+	projectsPreviousButton?.addEventListener('click', showPreviousProject);
+	projectsNextButton?.addEventListener('click', showNextProject);
+	updateProjectsCarousel();
+}
+
 function showFieldError(field) {
 	field.input.classList.add('error');
 	field.input.setAttribute('aria-invalid', 'true');
@@ -227,6 +330,10 @@ if (contactForm && contactSubmitButton && contactSuccessMessage && contactFields
 	contactFields.forEach((field) => {
 		field.input.addEventListener('input', () => clearFieldError(field));
 	});
+}
+
+if (projectsCarousel && projectsTrack && projectsDotsContainer && projectSlides.length > 0) {
+	startProjectsCarousel();
 }
 
 updateScrollState();
