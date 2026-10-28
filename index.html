@@ -6,10 +6,9 @@
 
 	<title>Guilherme Mais | Programador e Estudante de Engenharia da Computação</title>
 	<meta name="description" content="Portfólio de Guilherme Carvalho Mais, programador e estudante de Engenharia da Computação na PUC-Campinas. Projetos em C, Java, Python, JavaScript, HTML5 e CSS, com foco em Cibersegurança.">
-	<meta name="keywords" content="programador, engenharia da computação, PUC-Campinas, cibersegurança, C, Java, Python, JavaScript, HTML5, CSS3, portfólio, Guilherme Mais">
 	<meta name="author" content="Guilherme Carvalho Mais">
 	<meta name="robots" content="index, follow, max-image-preview:large">
-	<meta name="theme-color" content="#000000">
+	<meta name="theme-color" content="#0B0807">
 	<link rel="canonical" href="https://www.guilhermecmais.com/">
 
 	<meta property="og:type" content="website">
@@ -25,12 +24,51 @@
 	<meta name="twitter:title" content="Guilherme Mais | Programador e Estudante de Engenharia da Computação">
 	<meta name="twitter:description" content="Programador e estudante de Engenharia da Computação na PUC-Campinas, com foco em Cibersegurança.">
 	<meta name="twitter:image" content="https://www.guilhermecmais.com/imagens/IMG_1118.PNG">
+	<meta name="twitter:image:alt" content="Foto de perfil de Guilherme Carvalho Mais">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Sora:wght@400;500;600;700&display=swap">
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="js/scripts.js" defer></script>
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Guilherme Carvalho Mais",
+			"alternateName": "Guilherme Mais",
+			"url": "https://www.guilhermecmais.com/",
+			"image": "https://www.guilhermecmais.com/imagens/IMG_1118.PNG",
+			"jobTitle": "Programador",
+			"description": "Programador e estudante de Engenharia da Computação na PUC-Campinas, com foco em Cibersegurança.",
+			"affiliation": {
+				"@type": "CollegeOrUniversity",
+				"name": "Pontifícia Universidade Católica de Campinas"
+			},
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Campinas",
+				"addressRegion": "SP",
+				"addressCountry": "BR"
+			},
+			"knowsAbout": ["Cibersegurança", "Engenharia da Computação", "Desenvolvimento Front-end", "Angular", "HTML5", "CSS3", "JavaScript", "C", "Java", "Python", "Assembly", "VHDL"],
+			"sameAs": [
+				"https://www.instagram.com/gui_.mais/",
+				"https://www.linkedin.com/in/guilheme-carvalho-mais",
+				"https://github.com/guimais"
+			]
+		}
+	</script>
 </head>
 <body>
 	<a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+	<div class="ambient" aria-hidden="true">
+		<span class="ambient__glow ambient__glow--wine"></span>
+		<span class="ambient__glow ambient__glow--ember"></span>
+	</div>
 
 	<svg class="svg-definitions" width="0" height="0" aria-hidden="true" focusable="false">
 		<symbol id="icon-github" viewBox="0 0 24 24">
@@ -58,9 +96,9 @@
 		<nav class="mobile-menu" id="mobileMenu" aria-label="Navegação mobile" aria-hidden="true">
 			<ul>
 				<li><a href="#sobre" class="mobile-menu__link">Sobre</a></li>
-				<li><a href="#experiencia" class="mobile-menu__link">Experiência</a></li>
-				<li><a href="#habilidades" class="mobile-menu__link">Skills</a></li>
 				<li><a href="#projetos" class="mobile-menu__link">Projetos</a></li>
+				<li><a href="#habilidades" class="mobile-menu__link">Skills</a></li>
+				<li><a href="#experiencia" class="mobile-menu__link">Experiência</a></li>
 				<li><a href="#contato" class="mobile-menu__link">Contato</a></li>
 			</ul>
 		</nav>
@@ -103,91 +141,26 @@
 			<nav class="hero__menu" aria-label="Seções do portfólio">
 				<ul class="hero__menu-list">
 					<li><a href="#sobre" class="hero__menu-link">Sobre</a></li>
-					<li><a href="#experiencia" class="hero__menu-link">Experiência</a></li>
-					<li><a href="#habilidades" class="hero__menu-link">Skills</a></li>
 					<li><a href="#projetos" class="hero__menu-link">Projetos</a></li>
+					<li><a href="#habilidades" class="hero__menu-link">Skills</a></li>
+					<li><a href="#experiencia" class="hero__menu-link">Experiência</a></li>
 					<li><a href="#contato" class="hero__menu-link">Contato</a></li>
 				</ul>
 			</nav>
 		</section>
 
-		<section class="about section reveal-on-scroll" id="sobre" aria-labelledby="aboutTitle">
-			<div class="container">
-				<h2 class="about__statement" id="aboutTitle">Programador e estudante de <em>Engenharia da Computação</em>, com foco em Cibersegurança.</h2>
+		<section class="about section" id="sobre" aria-labelledby="aboutTitle">
+			<div class="container container--wide">
+				<h2 class="about__statement" id="aboutTitle" data-word-reveal>Programador e estudante de <em>Engenharia da Computação</em>, com foco em Cibersegurança.</h2>
 
-				<div class="about__details">
+				<div class="about__details reveal-stagger">
 					<p class="about__caption">
 						<span>Sobre mim</span>
 						<span>Campinas, Brasil</span>
 					</p>
-
-					<div class="about__text">
-						<p class="about__paragraph">Sou estudante de Engenharia da Computação na PUC-Campinas, com formação técnica em lógica computacional, sistemas embarcados, eletrônica digital e desenvolvimento de software. Programo em C, Java, Python, JavaScript, HTML5 e CSS, e consolido esse aprendizado em projetos acadêmicos e iniciativas próprias.</p>
-						<p class="about__paragraph">Direciono minha trajetória para a Cibersegurança, área que considero estratégica para proteger sistemas, dados e infraestruturas críticas. Meu objetivo é aliar profundidade técnica a uma visão aplicada, contribuindo para soluções seguras e confiáveis.</p>
-						<p class="about__paragraph">Na Liga de TI e Empreendedorismo da PUC-Campinas, sou Vice-Diretor de Eventos, cargo que assumi após um semestre como membro da área. Falo português, espanhol avançado e inglês intermediário.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="experience section" id="experiencia" aria-labelledby="experienceTitle">
-			<div class="container">
-				<div class="section-split">
-					<header class="section-split__intro reveal-on-scroll">
-						<p class="section-label">Trajetória</p>
-						<h2 class="section-title" id="experienceTitle">Minha <em>Experiência</em></h2>
-					</header>
-
-					<ol class="experience-list reveal-on-scroll">
-						<li>
-							<article class="experience-entry" aria-labelledby="experienceLigaTitle">
-								<header class="experience-entry__header">
-									<p class="experience-entry__period"><time datetime="2026-08">Ago 2026</time> – Presente</p>
-									<h3 class="experience-entry__role" id="experienceLigaTitle">Vice-Diretor de Eventos</h3>
-									<p class="experience-entry__organization">Liga de TI e Empreendedorismo · PUC-Campinas</p>
-								</header>
-
-								<ul class="experience-entry__highlights">
-									<li>Coordenei a realização de um hackathon em parceria com outras empresas, reunindo 24 participantes, com atuação na definição do formato, na logística e na condução do evento.</li>
-									<li>Organizo palestras e workshops de tecnologia para a comunidade universitária, do contato com os palestrantes até a execução no dia.</li>
-									<li>Atuo na diretoria de Eventos de uma entidade estudantil sem fins lucrativos, organizada por áreas e voltada ao aprofundamento prático em Tecnologia da Informação.</li>
-								</ul>
-							</article>
-						</li>
-					</ol>
-				</div>
-			</div>
-		</section>
-
-		<section class="skills section" id="habilidades" aria-labelledby="skillsTitle">
-			<div class="container">
-				<div class="section-split">
-					<header class="section-split__intro reveal-on-scroll">
-						<p class="section-label">Tecnologias</p>
-						<h2 class="section-title" id="skillsTitle">Minhas <em>Habilidades</em></h2>
-					</header>
-
-					<div class="skills__groups reveal-on-scroll">
-						<div class="skill-group">
-							<h3 class="skill-group__title" id="skillGroupWebTitle">Web</h3>
-							<ul class="skill-group__list" aria-labelledby="skillGroupWebTitle">
-								<li class="skill-badge skill-badge--html">HTML5</li>
-								<li class="skill-badge skill-badge--css">CSS3</li>
-								<li class="skill-badge skill-badge--javascript">JavaScript</li>
-							</ul>
-						</div>
-
-						<div class="skill-group">
-							<h3 class="skill-group__title" id="skillGroupLowLevelTitle">Low-Level, Hardware &amp; OOP</h3>
-							<ul class="skill-group__list" aria-labelledby="skillGroupLowLevelTitle">
-								<li class="skill-badge skill-badge--c">C</li>
-								<li class="skill-badge skill-badge--java">Java</li>
-								<li class="skill-badge skill-badge--python">Python</li>
-								<li class="skill-badge skill-badge--assembly">Assembly</li>
-								<li class="skill-badge skill-badge--vhdl">VHDL</li>
-							</ul>
-						</div>
-					</div>
+					<p class="about__paragraph about__paragraph--education">Sou estudante de Engenharia da Computação na PUC-Campinas, com formação técnica em lógica computacional, sistemas embarcados, eletrônica digital e desenvolvimento de software. Programo em C, Java, Python, JavaScript, HTML5 e CSS, e consolido esse aprendizado em projetos acadêmicos e iniciativas próprias.</p>
+					<p class="about__paragraph about__paragraph--focus">Direciono minha trajetória para a Cibersegurança, área que considero estratégica para proteger sistemas, dados e infraestruturas críticas. Meu objetivo é aliar profundidade técnica a uma visão aplicada, contribuindo para soluções seguras e confiáveis.</p>
+					<p class="about__paragraph about__paragraph--community">Na Liga de TI e Empreendedorismo da PUC-Campinas, sou Vice-Diretor de Eventos, cargo que assumi após um semestre como membro da área. Falo português, espanhol avançado e inglês intermediário.</p>
 				</div>
 			</div>
 		</section>
@@ -281,6 +254,155 @@
 			</div>
 		</section>
 
+		<section class="skills section" id="habilidades" aria-labelledby="skillsTitle">
+			<div class="container container--wide skills__layout">
+				<header class="reveal-on-scroll">
+					<p class="section-label">Tecnologias</p>
+					<h2 class="section-title section-title--large" id="skillsTitle">Minhas <em>Habilidades</em></h2>
+				</header>
+
+				<ul class="skills-grid reveal-stagger" aria-labelledby="skillsTitle">
+					<li class="skill-tile skill-tile--html">
+						<span class="skill-tile__index" aria-hidden="true">01</span>
+						<span class="skill-tile__icon" aria-hidden="true"></span>
+						<span class="skill-tile__name">HTML5</span>
+					</li>
+					<li class="skill-tile skill-tile--css">
+						<span class="skill-tile__index" aria-hidden="true">02</span>
+						<span class="skill-tile__icon" aria-hidden="true"></span>
+						<span class="skill-tile__name">CSS3</span>
+					</li>
+					<li class="skill-tile skill-tile--javascript">
+						<span class="skill-tile__index" aria-hidden="true">03</span>
+						<span class="skill-tile__icon" aria-hidden="true"></span>
+						<span class="skill-tile__name">JavaScript</span>
+					</li>
+					<li class="skill-tile skill-tile--c">
+						<span class="skill-tile__index" aria-hidden="true">04</span>
+						<span class="skill-tile__icon" aria-hidden="true"></span>
+						<span class="skill-tile__name">C</span>
+					</li>
+					<li class="skill-tile skill-tile--java">
+						<span class="skill-tile__index" aria-hidden="true">05</span>
+						<span class="skill-tile__icon" aria-hidden="true"></span>
+						<span class="skill-tile__name">Java</span>
+					</li>
+					<li class="skill-tile skill-tile--python">
+						<span class="skill-tile__index" aria-hidden="true">06</span>
+						<span class="skill-tile__icon" aria-hidden="true"></span>
+						<span class="skill-tile__name">Python</span>
+					</li>
+					<li class="skill-tile skill-tile--assembly">
+						<span class="skill-tile__index" aria-hidden="true">07</span>
+						<span class="skill-tile__icon" aria-hidden="true"></span>
+						<span class="skill-tile__name">Assembly</span>
+					</li>
+					<li class="skill-tile skill-tile--vhdl">
+						<span class="skill-tile__index" aria-hidden="true">08</span>
+						<span class="skill-tile__icon" aria-hidden="true"></span>
+						<span class="skill-tile__name">VHDL</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="experience section" id="experiencia" aria-labelledby="experienceTitle">
+			<div class="container container--wide">
+				<header class="experience__header reveal-on-scroll">
+					<p class="section-label">Trajetória</p>
+					<h2 class="section-title section-title--large" id="experienceTitle">Minha <em>Experiência</em></h2>
+				</header>
+
+				<ol class="experience-list reveal-stagger">
+					<li>
+						<article class="experience-entry" aria-labelledby="experienceLigaTitle">
+							<p class="experience-entry__meta">
+								<span class="experience-entry__index">01</span>
+								<span class="experience-entry__type">Cargo</span>
+							</p>
+
+							<div class="experience-entry__body">
+								<p class="experience-entry__context"><time datetime="2026-08">Ago 2026</time> – Presente</p>
+								<h3 class="experience-entry__title" id="experienceLigaTitle">Vice-Diretor de Eventos</h3>
+								<p class="experience-entry__organization">Liga de TI e Empreendedorismo · PUC-Campinas</p>
+								<ul class="experience-entry__highlights">
+									<li>Coordenei a realização de um hackathon em parceria com outras empresas, reunindo 24 participantes, com atuação na definição do formato, na logística e na condução do evento.</li>
+									<li>Organizo palestras e workshops de tecnologia para a comunidade universitária, do contato com os palestrantes até a execução no dia.</li>
+									<li>Atuo na diretoria de Eventos de uma entidade estudantil sem fins lucrativos, organizada por áreas e voltada ao aprofundamento prático em Tecnologia da Informação.</li>
+								</ul>
+							</div>
+
+							<figure class="experience-entry__media">
+								<img
+									src="imagens/foto-2.jpg"
+									alt="Evento organizado pela Liga de TI e Empreendedorismo da PUC-Campinas"
+									class="experience-entry__img"
+									width="1200"
+									height="900"
+									loading="lazy"
+									decoding="async"
+								>
+							</figure>
+						</article>
+					</li>
+
+					<li>
+						<article class="experience-entry" aria-labelledby="experienceSemanaIntegradaTitle">
+							<p class="experience-entry__meta">
+								<span class="experience-entry__index">02</span>
+								<span class="experience-entry__type">Palestra</span>
+							</p>
+
+							<div class="experience-entry__body">
+								<p class="experience-entry__context">28ª Semana Integrada · PUC-Campinas</p>
+								<h3 class="experience-entry__title" id="experienceSemanaIntegradaTitle">Primeiros passos no front-end: produtividade com Angular em um mundo movido a IA</h3>
+								<p class="experience-entry__organization">Palestrante pela Liga de TI e Empreendedorismo</p>
+							</div>
+
+							<figure class="experience-entry__media">
+								<img
+									src="imagens/foto-1.jpg"
+									alt="Guilherme Mais palestrando na 28ª Semana Integrada da PUC-Campinas"
+									class="experience-entry__img"
+									width="1200"
+									height="900"
+									loading="lazy"
+									decoding="async"
+								>
+							</figure>
+						</article>
+					</li>
+
+					<li>
+						<article class="experience-entry" aria-labelledby="experiencePapoTechTitle">
+							<p class="experience-entry__meta">
+								<span class="experience-entry__index">03</span>
+								<span class="experience-entry__type">Entrevista</span>
+							</p>
+
+							<div class="experience-entry__body">
+								<p class="experience-entry__context">Papo Tech #5</p>
+								<h3 class="experience-entry__title" id="experiencePapoTechTitle">Entrevista com Pedro Dell Valle, criador da Conty</h3>
+								<p class="experience-entry__organization">Palestrante e entrevistador pela Liga de TI e Empreendedorismo</p>
+							</div>
+
+							<figure class="experience-entry__media">
+								<img
+									src="imagens/foto-3.PNG"
+									alt="Guilherme Mais entrevistando Pedro Dell Valle no Papo Tech #5"
+									class="experience-entry__img"
+									width="1200"
+									height="900"
+									loading="lazy"
+									decoding="async"
+								>
+							</figure>
+						</article>
+					</li>
+				</ol>
+			</div>
+		</section>
+
 		<section class="contact section" id="contato" aria-labelledby="contactTitle">
 			<div class="container">
 				<div class="contact__inner">
@@ -359,8 +481,8 @@
 
 				<nav class="footer__links" aria-label="Links do rodapé">
 					<a href="#sobre">sobre</a>
-					<a href="#experiencia">experiência</a>
 					<a href="#projetos">projetos</a>
+					<a href="#experiencia">experiência</a>
 					<a href="#contato">contato</a>
 				</nav>
 			</div>
@@ -368,7 +490,8 @@
 	</footer>
 
 	<button type="button" class="back-to-top" id="backToTopButton" aria-label="Voltar ao topo">
-		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+		<svg class="back-to-top__progress" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" pathLength="100"/></svg>
+		<svg class="back-to-top__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
 	</button>
 </body>
 </html>

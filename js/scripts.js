@@ -10,6 +10,8 @@ const SUCCESS_MESSAGE_DURATION_MS = 5000;
 const MOBILE_MENU_BREAKPOINT = 860;
 const MINIMUM_MESSAGE_LENGTH = 10;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const WORD_REVEAL_START = 0.85;
+const WORD_REVEAL_END = 0.5;
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -18,7 +20,10 @@ const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
 const backToTopButton = document.getElementById('backToTopButton');
-const revealElements = document.querySelectorAll('.reveal-on-scroll');
+const revealElements = document.querySelectorAll('.reveal-on-scroll, .reveal-stagger');
+const staggerGroups = document.querySelectorAll('.reveal-stagger');
+const heroSection = document.getElementById('inicio');
+const wordRevealElement = document.querySelector('[data-word-reveal]');
 const animatedButtons = document.querySelectorAll('.btn, .back-to-top');
 const contactForm = document.getElementById('contactForm');
 const contactSubmitButton = document.getElementById('contactSubmitButton');
@@ -53,6 +58,8 @@ const contactFields = [
 	}
 ];
 
+let revealWords = [];
+let isScrollUpdateScheduled = false;
 let projectsDots = [];
 let currentProjectIndex = 0;
 let isProjectsUpdateScheduled = false;
@@ -62,6 +69,98 @@ function updateScrollState() {
 
 	siteNavigation?.classList.toggle('scrolled', scrollPosition > NAVIGATION_SCROLL_OFFSET);
 	backToTopButton?.classList.toggle('show', scrollPosition > BACK_TO_TOP_SCROLL_OFFSET);
+}
+
+function clamp(value, minimum, maximum) {
+	return Math.min(Math.max(value, minimum), maximum);
+}
+
+function updateScrollProgress() {
+	const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+	const pageProgress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+	const heroProgress = heroSection ? window.scrollY / heroSection.offsetHeight : 1;
+
+	document.documentElement.style.setProperty('--scroll-progress', clamp(pageProgress, 0, 1).toFixed(4));
+	document.documentElement.style.setProperty('--hero-progress', clamp(heroProgress, 0, 1).toFixed(4));
+}
+
+function splitIntoWords(element) {
+	Array.from(element.childNodes).forEach((node) => {
+		if (node.nodeType === Node.ELEMENT_NODE) {
+			splitIntoWords(node);
+			return;
+		}
+
+		if (node.nodeType !== Node.TEXT_NODE || !node.textContent.trim()) {
+			return;
+		}
+
+		const fragment = document.createDocumentFragment();
+
+		node.textContent.match(/^\s+|\S+\s*/g).forEach((part) => {
+			if (!part.trim()) {
+				fragment.append(part);
+				return;
+			}
+
+			const word = document.createElement('span');
+
+			word.className = 'reveal-word';
+			word.textContent = part;
+			fragment.append(word);
+		});
+
+		node.replaceWith(fragment);
+	});
+}
+
+function updateWordReveal() {
+	if (revealWords.length === 0) {
+		return;
+	}
+
+	const bounds = wordRevealElement.getBoundingClientRect();
+	const startLine = window.innerHeight * WORD_REVEAL_START;
+	const endLine = window.innerHeight * WORD_REVEAL_END;
+	const progress = clamp((startLine - bounds.top) / (startLine - endLine + bounds.height), 0, 1);
+	const litWordsCount = Math.round(progress * revealWords.length);
+
+	revealWords.forEach((word, index) => {
+		word.classList.toggle('is-lit', index < litWordsCount);
+	});
+}
+
+function updateScrollEffects() {
+	updateScrollState();
+	updateScrollProgress();
+	updateWordReveal();
+	isScrollUpdateScheduled = false;
+}
+
+function scheduleScrollEffects() {
+	if (isScrollUpdateScheduled) {
+		return;
+	}
+
+	isScrollUpdateScheduled = true;
+	requestAnimationFrame(updateScrollEffects);
+}
+
+function startWordReveal() {
+	if (!wordRevealElement || prefersReducedMotion) {
+		return;
+	}
+
+	splitIntoWords(wordRevealElement);
+	revealWords = Array.from(wordRevealElement.querySelectorAll('.reveal-word'));
+}
+
+function prepareStaggerGroups() {
+	staggerGroups.forEach((group) => {
+		Array.from(group.children).forEach((child, index) => {
+			child.style.setProperty('--stagger-index', index);
+		});
+	});
 }
 
 function scrollToTop() {
@@ -101,6 +200,11 @@ function closeMobileMenuOnDesktop() {
 	if (window.innerWidth > MOBILE_MENU_BREAKPOINT) {
 		closeMobileMenu();
 	}
+}
+
+function handleResize() {
+	closeMobileMenuOnDesktop();
+	scheduleScrollEffects();
 }
 
 function revealElement(element) {
@@ -317,8 +421,8 @@ function updateFooterYear() {
 	}
 }
 
-window.addEventListener('scroll', updateScrollState, { passive: true });
-window.addEventListener('resize', closeMobileMenuOnDesktop);
+window.addEventListener('scroll', scheduleScrollEffects, { passive: true });
+window.addEventListener('resize', handleResize);
 document.addEventListener('keydown', closeMobileMenuOnEscape);
 backToTopButton?.addEventListener('click', scrollToTop);
 mobileMenuToggle?.addEventListener('click', toggleMobileMenu);
@@ -336,6 +440,8 @@ if (projectsCarousel && projectsTrack && projectsDotsContainer && projectSlides.
 	startProjectsCarousel();
 }
 
-updateScrollState();
+startWordReveal();
+prepareStaggerGroups();
+updateScrollEffects();
 updateFooterYear();
 startScrollAnimations();
